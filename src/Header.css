@@ -1,0 +1,15 @@
+.header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    top: 0;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.header_logo {
+    height: 60px;
+    width: 40%;
+    text-align: center;
+    border: 2px solid lightgrey;
+}
