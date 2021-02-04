@@ -5,27 +5,32 @@ import Home from "./Home.js";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Test from "./Test";
 import React, { useState, useEffect } from 'react';
-import {getAllPokemon} from "./services/GetPokemon";
+import {getAllPokemon, getPokemon} from "./services/GetPokemon";
 
 
 
 function App() {
-    const [pokemonData, setPokemonData] = useState([])
-    const [nextUrl, setNextUrl] = useState('');
-    const [prevUrl, setPrevUrl] = useState('');
+    const [pokemonData, setPokemonData] = useState([]);
     const [loading, setLoading] = useState(true);
-    const initialURL = 'https://pokeapi.co/api/v2/pokemon'
+    const initialURL = 'https://pokeapi.co/api/v2/pokemon';
 
     useEffect(() => {
         async function fetchData() {
             let response = await getAllPokemon(initialURL);
-            console.log(response);
-            setNextUrl(response.next);
-            setPrevUrl(response.previous);
+            await loadPokemon(response.results);
             setLoading(false);
         }
         fetchData();
     }, []);
+
+    const loadPokemon = async (data) => {
+        let pokemonDataAll = await Promise.all(data.map(async pokemon => {
+            let pokemonRecord = await getPokemon(pokemon.url);
+            return pokemonRecord
+        }));
+        setPokemonData(pokemonDataAll);
+    };
+    console.log(pokemonData);
     return (
         <div>
             {loading ? <h1>Loading...</h1> : <h1>Data fetch</h1>}
