@@ -7,14 +7,23 @@
 }
 
 .home_row {
-    display: flex;
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
     z-index: 1;
-    margin-left: 5px;
-    margin-right: 5px;
 }
 
 .home_left {
     display: flex;
     flex-direction: column;
-    width: 67%;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-left: 15px;
+}
+.home_right {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: auto;
 }

@@ -2,19 +2,32 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
     margin: 10px;
     padding: 20px;
-    width: 100%;
-    max-height: 400px;
-    min-width: 100px;
+    width: 200px;
+    height: 300px;
     background-color: white;
     z-index: 1;
     border: 2px solid black;
 }
 
 .pokemon_power {
+    padding: 5px 10px;
+    margin: 10px 10px 10px 0;
+    border-radius: 5px;
+    background: cyan;
+    color: #fff;
+}
+
+.pokemon_powers {
     display: flex;
+    justify-content: center;
+}
+
+.pokemon_name {
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 500;
 }
 
 .pokemon_info {
@@ -22,9 +35,9 @@
     margin-bottom: 15px;
 }
 .pokemon > img {
-    max-height: 200px;
-    width: 100%;
-    object-fit: contain;
-    margin-bottom: 15px;
+    width: 100px;
+    height: 100px;
+    /*object-fit: contain;*/
+    margin-bottom: 5px;
     align-items: center;
 }
