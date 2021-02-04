@@ -1,0 +1,35 @@
+.pokemon_details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 15%;
+}
+.pokemon_oneCard {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
+    margin: 5px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+
+}
+
+.pokemon_oneCard > table {
+    border-collapse: collapse;
+}
+
+.pokemon_oneCard > table, th, td {
+    border: 1px solid black;
+}
+
+.pokemon_oneCard > img {
+    max-height: 200px;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 15px;
+    align-items: center;
+}

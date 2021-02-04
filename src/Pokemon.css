@@ -10,22 +10,11 @@
     min-width: 100px;
     background-color: white;
     z-index: 1;
+    border: 2px solid black;
 }
 
-.pokemon_rating {
+.pokemon_power {
     display: flex;
-}
-
-.pokemon > button {
-    background: #f0c15b;
-    border: 1px solid;
-    margin-top: 10px;
-    border-color: #a88734 #9c7e31 #846a29;
-    color: #111;
-}
-
-.pokemon_price {
-    margin-top: 5px;
 }
 
 .pokemon_info {
