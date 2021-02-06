@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import "./Home.css";
-import Pokemon, {pokemonID, someData} from "./Pokemon";
+import Pokemon from "./Pokemon";
 import PokemonDetails from "./PokemonDetails";
 import {getAllPokemon, getPokemon} from "./services/GetPokemon";
 
@@ -95,7 +95,7 @@ function Home() {
                     })}
                 </div>
 
-                <button id="morePokemon" onClick={loadMorePokemon}>Load More</button>
+                <button id="morePokemon" className="home_button" onClick={loadMorePokemon}><p>Load More</p></button>
 
 
             </div>

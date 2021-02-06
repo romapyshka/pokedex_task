@@ -1,6 +1,5 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import "./PokemonDetails.css";
-import {getAllPokemon, getPokemon} from "./services/GetPokemon";
 
 function PokemonDetails() {
 
