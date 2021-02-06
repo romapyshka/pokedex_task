@@ -1,49 +1,55 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "./PokemonDetails.css";
+import {getAllPokemon, getPokemon} from "./services/GetPokemon";
 
 function PokemonDetails() {
+
     return (
         <div className="pokemon_details">
             <div className="pokemon_oneCard">
-                <img src="https://static.posters.cz/image/1300/%D0%9F%D0%BB%D0%B0%D0%BA%D0%B0%D1%82/pokemon-pikachu-neon-i71936.jpg" alt=""/>
-                <h2> #005</h2>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt=""/>
+                <h2>
+                    Pikachu
+                </h2>
                 <table>
+                    <tbody>
                     <tr>
                         <th>Type</th>
-                        <th>Fire</th>
+                        <th>Ground Fairy</th>
                     </tr>
                     <tr>
                         <th>Attack</th>
-                        <th>00</th>
+                        <th>35</th>
                     </tr>
                     <tr>
                         <th>Defence</th>
-                        <th>00</th>
+                        <th>40</th>
                     </tr>
                     <tr>
                         <th>HP</th>
-                        <th>00</th>
+                        <th>35</th>
                     </tr>
                     <tr>
                         <th>SP Attack</th>
-                        <th>00</th>
+                        <th>50</th>
                     </tr>
                     <tr>
                         <th>SP Defense</th>
-                        <th>00</th>
+                        <th>50</th>
                     </tr>
                     <tr>
                         <th>Speed</th>
-                        <th>00</th>
+                        <th>90</th>
                     </tr>
                     <tr>
                         <th>Weight</th>
-                        <th>00</th>
+                        <th>6.0 kg</th>
                     </tr>
                     <tr>
                         <th>Total moves</th>
-                        <th>00</th>
+                        <th>320</th>
                     </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
